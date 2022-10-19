@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Feedback Form</title>
+    </head>
+    <body>
+        <h1> Contact Form</h1>
+        <form method="post" action="ProcessContactForm">
+            <table>
+                <tr><td><label>Name*</label></td>
+                <td><input name="name"></td></tr>
+                <tr><td><label>EmailAddress*</label></td>
+                <td><input name="email" type="email"></td></tr>
+                <tr><td><label>Telephone*</label></td>
+                <td><input name="phone"></td></tr>
+                <tr><td><label>Enquiry*</label></td>
+                <td><input name="enquiry" placeholder="General"></td></tr>
+                <tr><td><label>Message*</label></td>
+                <td><textarea name="message" placeholder="Your message must be greater than 20 characters"></textarea></td></tr>
+                <tr><td></td><td><input id="submit" name="submit" type="submit" value="Send"></td></tr>   
+                <tr><td>* Indicates the required field</td></tr>        
+            </table>
+        </form>
+    </body>
+</html>
