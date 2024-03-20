@@ -1,0 +1,10 @@
+.icons {
+    background-color: yellowgreen;
+   
+}
+
+.icon {
+    display: flex;
+    justify-content: space-evenly;
+}
+
