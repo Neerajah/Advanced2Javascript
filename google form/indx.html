@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Form Page</title>
+</head>
+<body>
+    <style>
+        * {
+          font-family: poppins;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          background-color: #ede6f6;
+        }
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .main {
+          height: 230px;
+          width: 50vw;
+          box-sizing: border-box;
+          background-color: white;
+          border-top: 12px solid #663ab5;
+          border-radius: 10px;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          font-size: 13px;
+        }
+        .main h1 {
+          font-size: 25px;
+        }
+        .name {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          padding: 10px;
+          padding-left: 30px;
+          margin-bottom: 0;
+          border-radius: 10px;
+        }
+  
+      input[type="text"],
+        [type="email"] {
+          border: none;
+          border-bottom: 1px solid black;
+          width: 90%;
+          padding: 5px;
+        }
+        .email {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+        .mobile {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .mobile {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .dateofbirth {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .address{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .gender{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .manualstatus{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .caste{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .religion{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .nationality {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .urban-rural{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .city {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .states{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 30px;
+          border-radius: 10px;
+        }
+
+        .pincode{
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 25px;
+          border-radius: 10px;
+        }
+
+        .degree {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 25px;
+          border-radius: 10px;
+        }
+
+        .fieldofstudy {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 25px;
+          border-radius: 10px;
+        }
+
+        .yearofpassing {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 25px;
+          border-radius: 10px;
+        }
+
+        .proofofresidance {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 25px;
+          border-radius: 10px;
+        }
+
+        .district {
+          background-color: white;
+          box-sizing: border-box;
+          height: 150px;
+          width: 50vw;
+          margin: 13px;
+          margin-bottom: 0;
+          padding: 10px;
+          padding-left: 25px;
+          border-radius: 10px;
+        }
+
+        /* button {
+          margin: 13px;
+          margin-bottom: 0;
+          align-self: flex-start;
+          position: relative;
+          left: 372px;
+          padding: 8px 19px;
+          border-radius: 3px;
+          background-color: #663ab5;
+          border: none;
+          color: white;
+        } */
+
+        .submit {
+          width: 50vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
+        button {
+          margin: 13px;
+          margin-left: 0;
+          margin-bottom: 0;
+          padding: 8px 19px;
+          border-radius: 3px;
+          background-color: #663ab5;
+          border: none;
+          color: white;
+        }
+
+        button:hover {
+          background-color: #452286;
+          transition: ease-in 200ms;
+        }
+
+        .rule {
+          width: 50vw;
+          margin-top: 15px;
+          font-size: 13px;
+          color: grey;
+        }
+
+        .policy {
+          font-size: 14px;
+          color: grey;
+        }
+
+        .policy a {
+          text-decoration: none;
+          color: grey;
+          text-decoration: underline;
+        }
+
+        img {
+          margin-top: 13px;
+          height: 200px;
+          width: 50vw;
+          object-fit: fill;
+          object-position: center;
+          border-radius: 10px;
+        }
+  
+        .Google {
+          text-align: center;
+        }
+        @media only screen and (max-width: 1000px){
+          img, .main, .name, .email,.submit, .rule, .policy, .Google {
+            width: 90vw;
+          }
+          img {
+            height: 125px;
+          }
+          .main {
+            height: 180px;
+            font-size: 12px;
+          }
+          .name, .email {
+            height: 110px;
+            font-size: 12px;
+          }
+  
+          .main h1 {
+            font-size: 18px;
+          }
+          .main p,h4 {
+            margin: 10px 0px;
+          }
+          h1 {
+            font-size: 25px;
+          }
+          input[type="text"],
+          [type="email"] {
+            padding: 5;
+          }
+          button {
+            padding: 10px 22px;
+            border-radius: 5px;
+          }
+        }
+      </style>
+    </head>
+    <body>
+      <form action="">
+        <div class="main">
+          <h1>Basic Form</h1>
+          <hr />
+          <p>
+            All the Submissions to this form will be appended into a table as
+            signatures in the style of basic form.
+          </p>
+          <h4 style="color: red;">* Required</h4>
+        </div>
+        <div class="first name">
+          <h3>First Name <span style="color: red;">*</span></h3>
+          <input type="text" name="name" id="" required />
+        </div>
+
+        <div class="last name">
+          <h3>Last Name <span style="color: red;">*</span></h3>
+          <input type="text" name="name" id="" required />
+        </div>
+
+        <div class="dateofbirth">
+            <h3>Date of Birth<span style="color: red;"> *</span></h3>
+        <input type="date" name="dateofbirth" id="dateofbirth">
+    </div>
+
+    <div class="gender">
+      <h3>Gender<span style="color: red;"> *</span></h3>
+      <input type="radio" name="gender" id="male" value="male">
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" value="female">
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="others" value="others">
+      <label for="others">Others</label>
+    </div>
+
+    <div class="manualstatus">
+      <h3>Manual Status<span style="color: red;"> *</span></h3>
+      <select>
+        <option>Select</option>
+        <option>Married</option>
+        <option>Single</option>
+        <option>Others</option>
+      </select>
+    </div>
+
+    <div class="caste">
+      <h3>Caste<span style="color: red;"> *</span></h3>
+      <select>
+        <option>General</option>
+        <option>OC</option>
+        <option>BC</option>
+        <option>ST</option>
+        <option>SC</option>
+        <option>OBC</option>
+        <option>Others</option>
+      </select>
+    </div>
+
+    <div class="religion">
+      <h3>Religion<span style="color: red;"> *</span></h3>
+      <select>
+        <option>Select</option>
+        <option>Hindu</option>
+        <option>Muslium</option>
+        <option>Christain</option>
+        <option>Others</option>
+      </select>
+    </div>
+
+    <div class="nationality">
+      <h3>Nationality<span style="color: red;"> *</span></h3>
+      <input type="text" name="name" id="" required />
+    </div>
+
+    <div class="urban-rural">
+      <h3>Urban/Rural<span style="color: red;"> *</span></h3>
+      <select>
+        <option>Select</option>
+        <option>Urban</option>
+        <option>Rural</option>
+      </select>
+    </div>
+
+    <div class="email">
+      <h3>Email-id<span style="color: red;"> *</span></h3>
+        <input type="email" name="name" id="" required />
+    </div>
+
+        <div class="mobile">
+          <h3>Mobile Number<span style="color: red;"> *</span></h3>
+          <input type="text" name="phone" id="" required />
+        </div>
+        
+        <div class="mobile">
+          <h3>Alternate Number<span style="color: red;"> *</span></h3>
+          <input type="text" name="phone" id="" required />
+        </div>
+
+        <div class="degree">
+          <h3>Degree<span style="color: red;"> *</span></h3>
+          <select name="Degree">
+              <option value="10th">10TH</option>
+              <option value="12th">12TH</option>
+              <option value="diploma">Diploma</option>
+              <option value="under-graduate">Under-Graduate</option>
+              <option value="post-graduate">Post-Graduate</option>
+              <option value="other's">Other's</option>
+          </select>
+        </div>
+
+        <div class="fieldofstudy">
+          <h3>Field of study<span style="color: red;">*</span></h3>
+          <input type="text" name="name" id="" required />
+        </div>
+
+        <div class="yearofpassing">
+          <h3>Year of passing <span style="color: red;">*</span></h3>
+          <input type="text" name="name" id="" required />
+        </div>
+
+        <div class="address">
+            <h3>Address<span style="color: red;"> *</span></h3>
+            <textarea name="address" id="address" cols="20" rows="5"></textarea>
+        </div>
+
+        <div class="parmanent address">
+          <h3>Parmanent Address</h3>
+          <input type="checkbox" name="abc">Same as Address
+        </div>
+        
+       <div class="pincode">
+          <h3>Pincode<span style="color: red;"> *</span></h3>
+          <input type="text" name="text" id="" required />
+        </div>
+
+        <div class="city">
+          <h3>City<span style="color: red;"> *</span></h3>
+          <select name="city">
+              <option value="arcot">Arcot</option>
+              <option value="chengalpattu">Chengalpattu</option>
+              <option value="chennai">Chennai</option>
+              <option value="chidambaram">Chidambaram</option>
+              <option value="coimbatore">Coimbatore</option>
+              <option value="cuddalore">Cuddalore</option>
+              <option value="dharmapuri">Dharmapuri</option>
+              <option value="dindigul">Dindigul</option>
+              <option value="erode">Erode</option>
+              <option value="kanchipuram">Kanchipuram</option>
+              <option value="kanniyakumari">Kanniyakumari</option>
+              <option value="kodaikannal">Kodaikannal</option>
+              <option value="kumbakonam">Kumbakonam</option>
+              <option value="madurai">Madurai</option>
+              <option value="mamallapuram">Mamallapuram</option>
+              <option value="nagappattinam">Nagappattinam</option>
+              <option value="nagercoil">Nagercoil</option>
+              <option value="palayamkottai">Palayamkottai</option>
+              <option value="pudukkottai">Pudukkottai</option>
+              <option value="rajapalayam">Rajapalayam</option>
+              <option value="ramanathapuram">Ramanathapuram</option>
+              <option value="salem">Salem</option>
+              <option value="thanjavur">Thanjavur</option>
+              <option value="tiruchirapalli">Tiruchirapalli</option>
+              <option value="tirunelveli">Tirunelveli</option>
+              <option value="tiruppur">Tiruppur</option>
+              <option value="thoothukudi">Thoothukudi</option>
+              <option value="udhagamandalam">Udhagamandalam</option>
+              <option value="vellore">Vellore</option>
+            </select>
+          </div>
+        
+        <div class="states">
+            <h3>States<span style="color: red;"> *</span></h3>
+            <select name="states">
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="kerala">Kerala</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="West Bengal">West Bengal</option>
+            </select>
+        </div>
+
+        <div class="district">
+          <h3>District<span style="color: red;"> *</span></h3>
+          <input type="text" name="text" id="" required />
+        </div>
+
+        <div class="proofofresidance">
+          <h3>Proof of Residance</h3>
+          <select>
+            <option>Select</option>
+            <option>Aadhar card</option>
+            <option>Bank statement</option>
+            <option>Credit card statement</option>
+            <option>Mortgage statement</option>
+            <option>Driving licence</option>
+            <option>Electricity bill</option>
+            <option>Landline bill</option>
+            <option>Gas bill</option>
+            <option>Lease agreement</option>
+            <option>Voter id</option>
+            <option>Car registration</option>
+            <option>Phone bill</option>
+            <option>Authorised change of address form</option>
+            <option>Insurance policy</option>
+            <option>Passport</option>
+            <option>Residance permit</option>
+            <option>Employer verification</option>
+            <option>Local government ID</option>
+            <option>Residential address</option>
+            <option>Education transcripts</option>
+            <option>Tax records</option>
+          </select>
+        </div>
+
+         <div class="submit">
+          <button>Submit</button>
+        </div>
+        <p class="rule">Never submit passwords through Google Forms</p>
+        <p class="policy">
+          This content is neither created nor endrosed by Google.
+          <a href="#">Report Abuse.</a> <a href="#">Terms of condition.</a>
+          <a href="#">Privacy Policy.</a>
+          <h1 class="Google" style="color: grey; font-weight: 550; width: 50vw;">Google Forms</h1>
+        </p>
+      </form>
+    </body>
+  </html>
+  
+    
